@@ -1,21 +1,21 @@
 {
-  "name": "distribute-elements",
+  "name": "distribute-layers",
   "version": "0.0.1",
   "description": "Distribute elements evenly i Framer.js",
-  "main": "distributeEvenly.coffee",
+  "main": "distributeLayers.coffee",
   "scripts": {
     "test": "mocha tests/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/martenbjork/distribute-elements.git"
+    "url": "git+https://github.com/martenbjork/distribute-layers.git"
   },
   "author": "Mårten Björk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/martenbjork/distribute-elements/issues"
+    "url": "https://github.com/martenbjork/distribute-layers/issues"
   },
-  "homepage": "https://github.com/martenbjork/distribute-elements#readme",
+  "homepage": "https://github.com/martenbjork/distribute-layers#readme",
   "devDependencies": {
     "mocha": "^2.5.3"
   }
