@@ -30,9 +30,11 @@ module.exports.distributeLayers =
 
     defaults =
       direction: "vertical"
-      startX: 0
+      startOffset: 0
       margin: 0
       reverse: false
+
+    options = Object.assign({}, defaults, options)
 
     offset = options.startOffset
     for index, layer of options.layers
