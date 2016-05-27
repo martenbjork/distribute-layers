@@ -3,7 +3,7 @@
 
 Evenly | Fit
 ---|---
-The layers are evenly spaced. | The layers follow one another tightly.
+The layers are evenly spaced. ![Tightly connected layers](https://cloud.githubusercontent.com/assets/875708/15611796/4dd73324-242c-11e6-8c92-286934ce4ea2.png) | The layers follow one another tightly. ![Evenly distributed layers](https://cloud.githubusercontent.com/assets/875708/15611795/4db9ac8c-242c-11e6-8ca2-f9bb46772216.png)
 
 ## Usage
 
