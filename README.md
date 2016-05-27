@@ -1,5 +1,5 @@
 # Distribute Layers for Framer.js
-This package helps you position multiple Framer layers with ease. You can position them in two ways:
+**This package helps you position multiple Framer layers with ease. You can position them in two ways:**
 
 Evenly | Fit
 ---|---
@@ -31,12 +31,14 @@ reverse | boolean | no | If true, elements will be distributed negatively (up or
 
 #### distributeLayers.evenly(settings = {})
 distributeLayers.evenly() accepts these additional parameters:
+
 Name | Type | Required | Description
 ---|---|---|---
 increment | int | yes | How much space to add between each layer.
 
 #### distributeLayers.fit(settings = {})
 distributeLayers.fit() accepts these additional parameters:
+
 Name | Type | Required | Description
 ---|---|---|---
 margin | int | no | Margin between each layer.
