@@ -19,8 +19,8 @@ distributeLayers.evenly
 	layers: layers
 ```
 
-## Options
-Both **distributeLayers.evenly(settings = {})** and **distributeLayers.fit(settings = {})** can be called with the following arguments:
+## Arguments
+All functions accept one argument: an options object. The functions can be called with the following arguments:
 
 Name | Type | Required | Description
 ---|---|---|---
@@ -29,14 +29,14 @@ direction | string | no | **"Horizontal"** or **"vertical"**. Defaults to vertic
 startOffset | int | no | X/Y starting point for the first layer. X when **direction** is "horizontal", Y when **"vertical"**.
 reverse | boolean | no | If true, elements will be distributed negatively (up or left). Good when your elements start from the right or bottom corner of the app.
 
-#### distributeLayers.evenly(settings = {})
+#### distributeLayers.evenly()
 distributeLayers.evenly() accepts these additional parameters:
 
 Name | Type | Required | Description
 ---|---|---|---
 increment | int | yes | How much space to add between each layer.
 
-#### distributeLayers.fit(settings = {})
+#### distributeLayers.fit()
 distributeLayers.fit() accepts these additional parameters:
 
 Name | Type | Required | Description
