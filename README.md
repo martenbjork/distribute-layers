@@ -15,7 +15,7 @@ layers[0] = new Layer
 layers[1] = new Layer
 layers[2] = new Layer
 
-distributeLayers.evenly # or .fit
+distributeLayers.evenly
 	layers: layers
 ```
 
