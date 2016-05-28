@@ -5,6 +5,8 @@ Evenly | Fit
 ---|---
 The layers are evenly spaced. ![Tightly connected layers](https://cloud.githubusercontent.com/assets/875708/15611898/c97e50fc-242c-11e6-89f7-d0d7bed3e19a.png) | The layers follow one another tightly. ![Evenly distributed layers](https://cloud.githubusercontent.com/assets/875708/15611897/c95fd10e-242c-11e6-9d8c-1d34512dfcab.png)
 
+Distribute Layers is a small module that is very easy to use:
+
 ![Screenshot from Framer Studio with code example from Distribute Layers](https://cloud.githubusercontent.com/assets/875708/15620658/db68e5a0-245b-11e6-8a06-4945be5c8a3e.jpg)
 
 ## Usage
