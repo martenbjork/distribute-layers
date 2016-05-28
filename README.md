@@ -7,7 +7,7 @@ The layers are evenly spaced. ![Tightly connected layers](https://cloud.githubus
 
 Distribute Layers is a small module that is very easy to use:
 
-![Screenshot from Framer Studio with code example from Distribute Layers](https://cloud.githubusercontent.com/assets/875708/15620658/db68e5a0-245b-11e6-8a06-4945be5c8a3e.jpg)
+![Screenshot from Framer Studio with code example from Distribute Layers](https://cloud.githubusercontent.com/assets/875708/15625770/1a40d56e-24b4-11e6-98ca-e1164fac46e2.jpg)
 
 ## Usage
 
