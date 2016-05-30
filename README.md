@@ -53,18 +53,18 @@ distributeLayers.sameDistance() accepts these additional arguments:
 
 Name | Type | Required | Description
 ---|---|---|---
-distance | int | yes | How much space to add between each arguments.
+distance | int | no | How much space to add between each arguments. Defaults to ```500```.
 
 #### distributeLayers.sameMargin()
 distributeLayers.sameMargin() accepts these additional parameters:
 
 Name | Type | Required | Description
 ---|---|---|---
-margin | int | no | Margin between each arguments.
+margin | int | no | Margin between each arguments. Defaults to ```10```.
 
 #### distributeLayers.spaced()
 distributeLayers.spaced() accepts these additional parameters:
 
 Name | Type | Required | Description
 ---|---|---|---
-max | int | no | The max area within the layers should be rendered.
+max | int | no | The max area within the layers should be rendered.  Defaults to ```1000```.
