@@ -1,4 +1,4 @@
-# Distribute Layers for Framer.js
+# Distribute Layers for Framer
 [Installation](https://#) &bullet; [Usage](https://#) &bullet; [Code Examples](https://#) &bullet; [Full documentation](https://#)
 *******
 
