@@ -34,8 +34,9 @@ layers[0] = new Layer
 layers[1] = new Layer
 layers[2] = new Layer
 
-distributeLayers.evenly
+distributeLayers.sameDistance
 	layers: layers
+	distance: 150
 ```
 
 ## Arguments
@@ -48,18 +49,18 @@ direction | string | no | ```horizontal``` or ```vertical```. Defaults to ```ver
 startOffset | int | no | X/Y starting point for the first layer. X when ```direction``` is ```horizontal```, Y when ```vertical```.
 
 #### distributeLayers.sameDistance()
-distributeLayers.sameDistance() accepts these additional parameters:
+distributeLayers.sameDistance() accepts these additional arguments:
 
 Name | Type | Required | Description
 ---|---|---|---
-distance | int | yes | How much space to add between each layer.
+distance | int | yes | How much space to add between each arguments.
 
 #### distributeLayers.sameMargin()
 distributeLayers.sameMargin() accepts these additional parameters:
 
 Name | Type | Required | Description
 ---|---|---|---
-margin | int | no | Margin between each layer.
+margin | int | no | Margin between each arguments.
 
 #### distributeLayers.spaced()
 distributeLayers.spaced() accepts these additional parameters:
