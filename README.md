@@ -54,6 +54,8 @@ Name | Type | Required | Description
 ---|---|---|---
 increment | int | yes | How much space to add between each layer.
 
+<img src="https://cloud.githubusercontent.com/assets/875708/15650429/c6f44cda-2678-11e6-8da0-dca69880a7d4.gif" width="100">
+
 #### distributeLayers.fit()
 distributeLayers.fit() accepts these additional parameters:
 
