@@ -1,4 +1,7 @@
 # Distribute Layers for Framer.js
+[Installation](https://#) &bullet; [Usage](https://#) &bullet; [Code Examples](https://#) &bullet; [Full documentation](https://#)
+*******
+
 **This package helps you position multiple Framer layers with ease.**
 
 It's similar to these buttons…
