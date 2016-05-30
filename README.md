@@ -16,6 +16,12 @@ Evenly | Fit | Equally
 ---|---|---
 The layers are positioned every nth pixel, regardless of their height. <img src="http://placehold.it/250x10/ffffff/ffffff"><img src="https://cloud.githubusercontent.com/assets/875708/15650429/c6f44cda-2678-11e6-8da0-dca69880a7d4.gif" width="250">| The layers follow each other with a constant ```margin``` between them. <img src="http://placehold.it/250x10/ffffff/ffffff"><img src="https://cloud.githubusercontent.com/assets/875708/15650431/c71e34fa-2678-11e6-8a2a-52b03d965d82.gif" width="250"> | The layers fill upp the space. The spacing between them is equal. <img src="http://placehold.it/250x10/ffffff/ffffff"><img src="https://cloud.githubusercontent.com/assets/875708/15650430/c70e0b3e-2678-11e6-8a6e-5a7dd9f4a4fd.gif" width="250">
 
+## Installation
+- Download [distributeLayers.coffee](https://raw.githubusercontent.com/martenbjork/distribute-layers/master/distributeLayers.coffee).
+- Open your project folder (YourProject.framer). Inside it, there is a modules folder. Put distributeLayers.coffee inside it.
+- At the top of your main Framer file, require the package using ```{ distributeLayers } = require "distributeLayers"```
+- Reload Framer Studio (or the page)
+
 ## Usage
 Distribute Layers is a small module that is very easy to use:
 
