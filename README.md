@@ -1,7 +1,13 @@
 # Distribute Layers for Framer.js
 **This package helps you position multiple Framer layers with ease.**
 
-You can position them in three ways:
+It's similar to these buttons…
+
+![](https://cloud.githubusercontent.com/assets/875708/15651127/dc96b49c-267d-11e6-986d-199d9ba80003.png) 
+
+…that you know and love 😍.
+
+**You can position layers in three ways:**
 
 Evenly | Fit | Equally
 ---|---|---
