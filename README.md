@@ -36,7 +36,7 @@ layers[2] = new Layer
 
 distributeLayers.sameDistance
 	layers: layers
-	distance: 150
+	distance: 250
 ```
 
 ## Arguments
