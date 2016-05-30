@@ -22,7 +22,7 @@ The layers are positioned every nth pixel, regardless of their height. <img src=
 - At the top of your main Framer file, require the package using ```{ distributeLayers } = require "distributeLayers"```
 - Reload Framer Studio (or the page)
 
-![Screenshot from Framer Studio with code example from Distribute Layers](https://cloud.githubusercontent.com/assets/875708/15625770/1a40d56e-24b4-11e6-98ca-e1164fac46e2.jpg)
+![Screenshot from Framer Studio with code example from Distribute Layers](https://cloud.githubusercontent.com/assets/875708/15653125/46039b36-268b-11e6-98d4-18a71cf65246.jpg)
 
 ## Code examples
 
