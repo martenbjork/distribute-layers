@@ -3,7 +3,9 @@
 
 Evenly | Fit | Equally
 ---|---|---
-The layers are evenly spaced. ![Tightly connected layers](https://cloud.githubusercontent.com/assets/875708/15650429/c6f44cda-2678-11e6-8da0-dca69880a7d4.gif) | The layers follow one another tightly. ![Evenly distributed layers](https://cloud.githubusercontent.com/assets/875708/15650431/c71e34fa-2678-11e6-8a2a-52b03d965d82.gif) | The layers fill upp the space. ![Evenly distributed layers](https://cloud.githubusercontent.com/assets/875708/15650430/c70e0b3e-2678-11e6-8a6e-5a7dd9f4a4fd.gif)
+The layers are evenly spaced.The layers are evenly spaced.| The layers follow one another tightly.The layers are evenly spaced. | The layers fill upp the space. The layers are evenly spaced.
+![Tightly connected layers](https://cloud.githubusercontent.com/assets/875708/15650429/c6f44cda-2678-11e6-8da0-dca69880a7d4.gif) | ![Evenly distributed layers](https://cloud.githubusercontent.com/assets/875708/15650431/c71e34fa-2678-11e6-8a2a-52b03d965d82.gif) | ![Evenly distributed layers](https://cloud.githubusercontent.com/assets/875708/15650430/c70e0b3e-2678-11e6-8a6e-5a7dd9f4a4fd.gif)
+•••••••••••••••••••••••••••••••••••••••••••••••|•••••••••••••••••••••••••••••••••••••••••••••••|•••••••••••••••••••••••••••••••••••••••••••••••
 
 Distribute Layers is a small module that is very easy to use:
 
