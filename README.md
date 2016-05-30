@@ -12,7 +12,7 @@ It's similar to these buttons…
 
 **You can position layers in three ways:**
 
-Evenly | Fit | Equally
+sameDistance | sameMargin | spaced
 ---|---|---
 The layers are positioned every nth pixel, regardless of their height. <img src="http://placehold.it/250x10/ffffff/ffffff"><img src="https://cloud.githubusercontent.com/assets/875708/15650429/c6f44cda-2678-11e6-8da0-dca69880a7d4.gif" width="250">| The layers follow each other with a constant ```margin``` between them. <img src="http://placehold.it/250x10/ffffff/ffffff"><img src="https://cloud.githubusercontent.com/assets/875708/15650431/c71e34fa-2678-11e6-8a2a-52b03d965d82.gif" width="250"> | The layers fill upp the space. The spacing between them is equal. <img src="http://placehold.it/250x10/ffffff/ffffff"><img src="https://cloud.githubusercontent.com/assets/875708/15650430/c70e0b3e-2678-11e6-8a6e-5a7dd9f4a4fd.gif" width="250">
 
@@ -34,8 +34,9 @@ layers[0] = new Layer
 layers[1] = new Layer
 layers[2] = new Layer
 
-distributeLayers.evenly
+distributeLayers.sameDistance
 	layers: layers
+	distance: 250
 ```
 
 ## Arguments
@@ -44,21 +45,26 @@ All functions accept one argument: an options object. The functions can be calle
 Name | Type | Required | Description
 ---|---|---|---
 layers | array | yes | An array containing the layers you want to distribute.
-direction | string | no | **"Horizontal"** or **"vertical"**. Defaults to vertical.
-startOffset | int | no | X/Y starting point for the first layer. X when **direction** is "horizontal", Y when **"vertical"**.
+direction | string | no | ```horizontal``` or ```vertical```. Defaults to ```vertical```.
+startOffset | int | no | X/Y starting point for the first layer. X when ```direction``` is ```horizontal```, Y when ```vertical```.
 
-#### distributeLayers.evenly()
-distributeLayers.evenly() accepts these additional parameters:
-
-Name | Type | Required | Description
----|---|---|---
-increment | int | yes | How much space to add between each layer.
-
-<img src="https://cloud.githubusercontent.com/assets/875708/15650429/c6f44cda-2678-11e6-8da0-dca69880a7d4.gif" width="100">
-
-#### distributeLayers.fit()
-distributeLayers.fit() accepts these additional parameters:
+#### distributeLayers.sameDistance()
+distributeLayers.sameDistance() accepts these additional arguments:
 
 Name | Type | Required | Description
 ---|---|---|---
-margin | int | no | Margin between each layer.
+distance | int | no | How much space to add between each arguments. Defaults to ```500```.
+
+#### distributeLayers.sameMargin()
+distributeLayers.sameMargin() accepts these additional parameters:
+
+Name | Type | Required | Description
+---|---|---|---
+margin | int | no | Margin between each arguments. Defaults to ```10```.
+
+#### distributeLayers.spaced()
+distributeLayers.spaced() accepts these additional parameters:
+
+Name | Type | Required | Description
+---|---|---|---
+max | int | no | The max area within the layers should be rendered.  Defaults to ```1000```.
