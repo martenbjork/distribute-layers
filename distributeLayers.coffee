@@ -1,17 +1,22 @@
 module.exports.distributeLayers =
 
+	# Defaults used by every public method
 	globalDefaults:
 		direction: "vertical"
 		startOffset: 0
 
+	# All layers have the same distance from eachother. 50, 100, 150, 200 etc.
 	sameDistance: (options) ->
 
+		# Arguments that are unique to this method
 		defaults =
 			distance: 500
 
+		# Set up options and validate properties
 		options = Object.assign({}, this.globalDefaults, defaults, options)
 		this._validateOptions(options)
 
+		# Loop through all layers and position them
 		offset = options.startOffset
 		for index, layer of options.layers
 			if options.direction == "vertical"
@@ -20,16 +25,21 @@ module.exports.distributeLayers =
 				layer.x = offset
 			offset += options.distance
 
-		_setLayerMetadata(layer, 'methodUsed', 'sameDistance')
+		# Remember which method was used
+		this._setLayerMetadata(layer, 'methodUsed', 'sameDistance')
 
+	# Layers follow one another. They are spaced with the same margin.
 	sameMargin: (options) ->
 
+		# Arguments that are unique to this method
 		defaults =
 			margin: 10
 
+		# Set up options and validate properties
 		options = Object.assign({}, this.globalDefaults, defaults, options)
 		this._validateOptions(options)
 
+		# Loop through all layers and position them
 		offset = options.startOffset
 		for index, layer of options.layers
 			if options.direction == "vertical"
@@ -39,16 +49,22 @@ module.exports.distributeLayers =
 				layer.x = offset
 				offset += layer.width + options.margin
 
-		_setLayerMetadata(layer, 'methodUsed', 'sameMargin')
+		# Remember which method was used
+		this._setLayerMetadata(layer, 'methodUsed', 'sameMargin')
 
+	# Layers fill up the space between 0 and 'max'. The space
+	# between the layers is automatically calculated.
 	spaced: (options) ->
 
+		# Arguments that are unique to this method
 		defaults =
 			max: 1000
 
+		# Set up options and validate properties
 		options = Object.assign({}, this.globalDefaults, defaults, options)
 		this._validateOptions(options)
 
+		# Calculate the height/width of all layers combined
 		totalArea = 0
 		for index, layer of options.layers
 			if options.direction == "vertical"
@@ -56,7 +72,10 @@ module.exports.distributeLayers =
 			else
 				totalArea += layer.width
 
+		# Calculate the spacing between each layer
 		spacing = (options.max - totalArea) / (options.layers.length - 1)
+
+		# Loop through all layers and position them
 		offset = options.startOffset
 		for index, layer of options.layers
 			if options.direction == "vertical"
@@ -65,8 +84,10 @@ module.exports.distributeLayers =
 				layer.x = offset
 			offset += layer.height + spacing
 
-		_setLayerMetadata(layer, 'methodUsed', 'spaced')
+		# Remember which method was used
+		this._setLayerMetadata(layer, 'methodUsed', 'spaced')
 
+	# Simple validation for options objects. Designed to be beginner-friendly.
 	_validateOptions: (options) ->
 
 		if !options.layers
@@ -84,6 +105,7 @@ module.exports.distributeLayers =
 		if typeof options.startOffset == "string"
 			throw this._error('numberAsString', options.startOffset)
 
+	# Throws different errors for different error codes
 	_error: (id, value) ->
 		err = null
 		if id == "numberAsString"
@@ -96,7 +118,8 @@ module.exports.distributeLayers =
 			err = new Error "The array that you passed to distributeLayers.layers was empty"
 		return err
 
+	# Attaches custom metadata to layers
 	_setLayerMetadata: (layer, key, value) ->
 		if !layer.custom then layer.custom = {}
-		layer.custom.distributeEvenly = {}
-		layer.custom.distributeEvenly[key] = vale
+		layer.custom.distributeLayers = {}
+		layer.custom.distributeLayers[key] = value
