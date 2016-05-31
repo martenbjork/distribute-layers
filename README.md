@@ -4,7 +4,7 @@
 
 **This package helps you position multiple Framer layers with ease.**
 
-<img alt="It's a bit like the Distribute Elements buttons in Sketch, but for Framer" src="https://cloud.githubusercontent.com/assets/875708/15664605/b46677fe-2705-11e6-9106-8de558134382.jpg" width="430">
+<img alt="It's a bit like the Distribute Elements buttons in Sketch, but for Framer" src="https://cloud.githubusercontent.com/assets/875708/15664647/01cf6438-2706-11e6-9698-e9379f725028.jpg" width="430">
 
 **You can position layers in three ways:**
 
