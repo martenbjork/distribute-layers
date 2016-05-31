@@ -1,5 +1,5 @@
 # Distribute Layers for Framer
-[Installation](https://#) &bullet; [Usage](https://#) &bullet; [Code Examples](https://#) &bullet; [Full documentation](https://#)
+[Installation](#installation) &bullet; [Code Examples](#code-examples) &bullet; [Full documentation](#full-documentation)
 *******
 
 **This package helps you position multiple Framer layers with ease.**
@@ -39,7 +39,7 @@ distributeLayers.sameDistance
 	distance: 250
 ```
 
-## Arguments
+## Full documentation
 All functions accept one argument: an options object. The functions can be called with the following arguments:
 
 Name | Type | Required | Description
