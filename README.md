@@ -38,6 +38,12 @@ distributeLayers.sameDistance
 ```
 
 ## Full documentation
+There are three functions:
+
+- distributeLayers.sameDistance(options)
+- distributeLayers.sameMargin(options)
+- distributeLayers.spaced(options)
+
 All functions accept one argument: an options object. The functions can be called with the following arguments:
 
 Name | Type | Required | Description
@@ -46,8 +52,8 @@ layers | array | yes | An array containing the layers you want to distribute.
 direction | string | no | ```horizontal``` or ```vertical```. Defaults to ```vertical```.
 startOffset | int | no | X/Y starting point for the first layer. X when ```direction``` is ```horizontal```, Y when ```vertical```.
 
-#### distributeLayers.sameDistance()
-distributeLayers.sameDistance() accepts these additional arguments:
+#### ➡️ distributeLayers.sameDistance()
+In addition to the parameters above, distributeLayers.sameDistance() accepts these additional arguments:
 
 Name | Type | Required | Description
 ---|---|---|---
@@ -66,8 +72,10 @@ distributeLayers.sameDistance
 	distance: 250 # distance beteen each layer
 ```
 
-#### distributeLayers.sameMargin()
-distributeLayers.sameMargin() accepts these additional parameters:
+[See example project](http://share.framerjs.com/vzfqvb042lya/) (Click open to view code in Framer Studio)
+
+#### ➡️ distributeLayers.sameMargin()
+In addition to the parameters above, distributeLayers.sameMargin() accepts these additional parameters:
 
 Name | Type | Required | Description
 ---|---|---|---
@@ -81,13 +89,15 @@ layers[0] = new Layer
 layers[1] = new Layer
 layers[2] = new Layer
 
-distributeLayers.sameDistance
+distributeLayers.sameMargin
 	layers: layers
 	margin: 20 # margin beteen the layers
 ```
 
-#### distributeLayers.spaced()
-distributeLayers.spaced() accepts these additional parameters:
+[See example project](http://share.framerjs.com/widmwj40jovz/) (Click open to view code in Framer Studio)
+
+#### ➡️ distributeLayers.spaced()
+In addition to the parameters above, distributeLayers.spaced() accepts these additional parameters:
 
 Name | Type | Required | Description
 ---|---|---|---
@@ -102,7 +112,8 @@ layers[0] = new Layer
 layers[1] = new Layer
 layers[2] = new Layer
 
-distributeLayers.sameDistance
+distributeLayers.spaced
 	layers: layers
 	max: 1500 # The total space that the layers should fill up
 ```
+[See example project](http://share.framerjs.com/s8um1517do7j/) (Click open to view code in Framer Studio)
