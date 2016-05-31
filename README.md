@@ -18,7 +18,6 @@ You ➡️ can ➡️ also ➡️ distribute ➡️ layers ➡️ horizontally.
 - Download [distributeLayers.coffee](https://raw.githubusercontent.com/martenbjork/distribute-layers/master/distributeLayers.coffee).
 - Open your project folder (YourProject.framer). Inside it, there is a modules folder. Put distributeLayers.coffee inside it.
 - At the top of your main Framer file, require the package using ```{ distributeLayers } = require "distributeLayers"```
-- Reload Framer Studio (or the page)
 
 ![Screenshot from Framer Studio with code example from Distribute Layers](https://cloud.githubusercontent.com/assets/875708/15653125/46039b36-268b-11e6-98d4-18a71cf65246.jpg)
 
