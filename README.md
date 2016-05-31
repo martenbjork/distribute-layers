@@ -72,7 +72,7 @@ distributeLayers.sameDistance
 	distance: 250 # distance beteen each layer
 ```
 
-[See example project](http://share.framerjs.com/vzfqvb042lya/) (Click open to view code in Framer Studio)
+[See example project](http://share.framerjs.com/vzfqvb042lya/) (Click “open” to view code in Framer Studio)
 
 #### ➡️ distributeLayers.sameMargin()
 In addition to the parameters above, distributeLayers.sameMargin() accepts these additional parameters:
@@ -94,7 +94,7 @@ distributeLayers.sameMargin
 	margin: 20 # margin beteen the layers
 ```
 
-[See example project](http://share.framerjs.com/widmwj40jovz/) (Click open to view code in Framer Studio)
+[See example project](http://share.framerjs.com/widmwj40jovz/) (Click “open” to view code in Framer Studio)
 
 #### ➡️ distributeLayers.spaced()
 In addition to the parameters above, distributeLayers.spaced() accepts these additional parameters:
@@ -116,4 +116,4 @@ distributeLayers.spaced
 	layers: layers
 	max: 1500 # The total space that the layers should fill up
 ```
-[See example project](http://share.framerjs.com/s8um1517do7j/) (Click open to view code in Framer Studio)
+[See example project](http://share.framerjs.com/s8um1517do7j/) (Click “open” to view code in Framer Studio)
