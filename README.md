@@ -58,19 +58,6 @@ Name | Type | Required | Description
 ---|---|---|---
 distance | int | no | How much space to add between each arguments. Defaults to ```500```.
 
-```
-{ distributeLayers } = require "distributeLayers"
-
-layers = []
-layers[0] = new Layer
-layers[1] = new Layer
-layers[2] = new Layer
-
-distributeLayers.sameDistance
-	layers: layers
-	distance: 250 # distance beteen each layer
-```
-
 [See example project](http://share.framerjs.com/vzfqvb042lya/) (Click “open” to view code in Framer Studio)
 
 #### ➡️ distributeLayers.sameMargin()
@@ -79,19 +66,6 @@ In addition to the parameters above, distributeLayers.sameMargin() accepts these
 Name | Type | Required | Description
 ---|---|---|---
 margin | int | no | Margin between each arguments. Defaults to ```10```.
-
-```
-{ distributeLayers } = require "distributeLayers"
-
-layers = []
-layers[0] = new Layer
-layers[1] = new Layer
-layers[2] = new Layer
-
-distributeLayers.sameMargin
-	layers: layers
-	margin: 20 # margin beteen the layers
-```
 
 [See example project](http://share.framerjs.com/widmwj40jovz/) (Click “open” to view code in Framer Studio)
 
@@ -102,17 +76,4 @@ Name | Type | Required | Description
 ---|---|---|---
 max | int | no | The max area within the layers should be rendered.  Defaults to ```1000```.
 
-
-```
-{ distributeLayers } = require "distributeLayers"
-
-layers = []
-layers[0] = new Layer
-layers[1] = new Layer
-layers[2] = new Layer
-
-distributeLayers.spaced
-	layers: layers
-	max: 1500 # The total space that the layers should fill up
-```
 [See example project](http://share.framerjs.com/s8um1517do7j/) (Click “open” to view code in Framer Studio)
