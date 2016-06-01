@@ -74,6 +74,6 @@ In addition to the parameters above, distributeLayers.spaced() accepts these add
 
 Name | Type | Required | Description
 ---|---|---|---
-max | int | no | The max area within the layers should be rendered.  Defaults to ```1000```.
+max | int | no | The max area within which the layers should be rendered.  Defaults to ```1000```.
 
 [See example project](http://share.framerjs.com/s8um1517do7j/) (Click “open” to view code in Framer Studio)
