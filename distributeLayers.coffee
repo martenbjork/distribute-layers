@@ -1,91 +1,93 @@
-module.exports.distributeLayers =
+distributeLayers =
 
-	# Defaults used by every public method
-	globalDefaults:
-		direction: "vertical"
+	globalOptions:
 		startOffset: 0
+		direction: "vertical"
 
-	# All layers have the same distance from eachother. 50, 100, 150, 200 etc.
+	globalAnimationOptions:
+		time: 0
+
 	sameDistance: (options) ->
-
-		# Arguments that are unique to this method
 		defaults =
-			distance: 500
-
-		# Set up options and validate properties
-		options = Object.assign({}, this.globalDefaults, defaults, options)
+			distance: 250
+		options = Object.assign {}, this.globalOptions, defaults, options
 		this._validateOptions(options)
+		animation = Object.assign {}, this.globalAnimationOptions, options.animationOptions
 
-		# Loop through all layers and position them
-		offset = options.startOffset
-		for index, layer of options.layers
-			if options.direction == "vertical"
-				layer.y = offset
-			else
-				layer.x = offset
-			offset += options.distance
+		for i, layer of options.layers
+			thisAnimation =
+				layer: layer
 
-		# Remember which method was used
-		this._setLayerMetadata(layer, 'methodUsed', 'sameDistance')
+			if (options.direction == "vertical") then key = "y" else key = "x"
+			thisAnimation.properties = {}
+			thisAnimation.properties[key] = i * options.distance
 
-	# Layers follow one another. They are spaced with the same margin.
+			animation = Object.assign {}, animation, thisAnimation
+			a = new Animation animation
+			a.start()
+
 	sameMargin: (options) ->
-
-		# Arguments that are unique to this method
 		defaults =
 			margin: 10
-
-		# Set up options and validate properties
-		options = Object.assign({}, this.globalDefaults, defaults, options)
+		options = Object.assign {}, this.globalOptions, defaults, options
 		this._validateOptions(options)
+		if options.direction == "vertical"
+			key = "y"
+			prop = "height"
+		else
+			key = "x"
+			prop = "width"
 
-		# Loop through all layers and position them
-		offset = options.startOffset
-		for index, layer of options.layers
-			if options.direction == "vertical"
-				layer.y = offset
-				offset += layer.height + options.margin
-			else
-				layer.x = offset
-				offset += layer.width + options.margin
+		animation = Object.assign {}, this.globalAnimationOptions, options.animationOptions
 
-		# Remember which method was used
-		this._setLayerMetadata(layer, 'methodUsed', 'sameMargin')
+		currentOffset = options.startOffset
+		for i, layer of options.layers
+			thisAnimation =
+				layer: layer
+			thisAnimation.properties = {}
+			thisAnimation.properties[key] = currentOffset
 
-	# Layers fill up the space between 0 and 'max'. The space
-	# between the layers is automatically calculated.
+			animation = Object.assign {}, animation, thisAnimation
+			a = new Animation animation
+			currentOffset += layer[prop] + options.margin
+			a.start()
+
 	spaced: (options) ->
 
-		# Arguments that are unique to this method
 		defaults =
 			max: 1000
-
-		# Set up options and validate properties
-		options = Object.assign({}, this.globalDefaults, defaults, options)
+		options = Object.assign {}, this.globalOptions, defaults, options
 		this._validateOptions(options)
 
-		# Calculate the height/width of all layers combined
-		totalArea = 0
-		for index, layer of options.layers
-			if options.direction == "vertical"
-				totalArea += layer.height
-			else
-				totalArea += layer.width
+		if options.direction == "vertical"
+			key = "y"
+			prop = "height"
+		else
+			key = "x"
+			prop = "width"
 
-		# Calculate the spacing between each layer
-		spacing = (options.max - totalArea) / (options.layers.length - 1)
+		animation = Object.assign {}, this.globalAnimationOptions, options.animationOptions
 
-		# Loop through all layers and position them
-		offset = options.startOffset
-		for index, layer of options.layers
-			if options.direction == "vertical"
-				layer.y = offset
-			else
-				layer.x = offset
-			offset += layer.height + spacing
+		layersTotalWidthHeight = 0
+		for i, layer of options.layers
+			layersTotalWidthHeight += layer[prop]
 
-		# Remember which method was used
-		this._setLayerMetadata(layer, 'methodUsed', 'spaced')
+		spaceBetweenEach = (options.max - layersTotalWidthHeight) / options.layers.length
+
+		currentOffset = options.startOffset
+		for i, layer of options.layers
+			thisAnimation =
+				layer: layer
+
+			thisAnimation.properties = {}
+			thisAnimation.properties[key] = currentOffset
+
+			animation = Object.assign {}, animation, thisAnimation
+			this._validateOptions(options)
+			a = new Animation animation
+			a.start()
+
+			currentOffset += layer[prop] + spaceBetweenEach
 
 	# Simple validation for options objects. Designed to be beginner-friendly.
 	_validateOptions: (options) ->
@@ -118,8 +120,4 @@ module.exports.distributeLayers =
 			err = new Error "The array that you passed to distributeLayers.layers was empty"
 		return err
 
-	# Attaches custom metadata to layers
-	_setLayerMetadata: (layer, key, value) ->
-		if !layer.custom then layer.custom = {}
-		layer.custom.distributeLayers = {}
-		layer.custom.distributeLayers[key] = value
+module.exports.distributeLayers = distributeLayers
