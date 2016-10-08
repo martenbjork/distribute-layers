@@ -80,9 +80,11 @@ module.exports.distributeLayers =
 		for index, layer of options.layers
 			if options.direction == "vertical"
 				layer.y = offset
+				offset += layer.height + spacing
 			else
 				layer.x = offset
-			offset += layer.height + spacing
+				offset += layer.width + spacing
+			
 
 		# Remember which method was used
 		this._setLayerMetadata(layer, 'methodUsed', 'spaced')
